@@ -16,5 +16,20 @@ public class CardGame {
 			}
 		}
 	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int numberOfPlayers;
+        Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number of players");
+		numberOfPlayers=sc.nextInt();			// number of player added from console
+		if (numberOfPlayers < 2 || numberOfPlayers > 4) {
+			System.out.println("Enter the value between 2 and 4");
+			numberOfPlayers = sc.nextInt();
+		}else {
+			Players player=new Players(numberOfPlayers);
+		}
+		
+	}
 }
 

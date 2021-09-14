@@ -2,7 +2,7 @@ package cardgames;
 
 import java.util.*;
 public class CardGame {
-	private List<Cards> cards;
+	public static ArrayList<Cards> cards;
 
 	//initial setup Constructs a standard deck of 52 cards.
 	private static final List<String> RANKS = new ArrayList<String>(List.of("2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"));
@@ -17,8 +17,13 @@ public class CardGame {
 		}
 	}
 	
+	//method to shuffle cards
+	public void shuffle()
+	{
+	    Collections.shuffle(cards);
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int numberOfPlayers;
         Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the number of players");
@@ -30,6 +35,7 @@ public class CardGame {
 		}else {
 			Players player=new Players(numberOfPlayers);
 			player.PlayersOrder();
+			player.distributeCards(cards); // function call to order player sequence
 		}
 		
 	}

@@ -52,4 +52,15 @@ public class Players {
 		}
 	}
 	
+	/**
+	 * @method to output count of different type of cards received by a player
+	 */
+	public void suitsForEachPlayer() {
+		for(int i=0;i<numberOfPlayers;i++) {
+			PlayerCards eachPlayer=players.get(sequence.get(i));
+			System.out.println("Player "+(i+1)+" has"+" recieved");
+			System.out.println(eachPlayer.suitsCardsForEach());
+		}
+	}
+	
 }

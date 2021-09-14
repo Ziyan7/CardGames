@@ -36,6 +36,7 @@ public class CardGame {
 			Players player=new Players(numberOfPlayers);
 			player.PlayersOrder();
 			player.distributeCards(cards); // function call to order player sequence
+			player.suitsForEachPlayer();
 		}
 		
 	}

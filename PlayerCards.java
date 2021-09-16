@@ -23,6 +23,9 @@ public class PlayerCards {
     	return this.cardsForEachPlayer;
     }
     
+    public ArrayList<Cards> getCards() {
+    	return this.cardsForEachPlayer;
+    }
     /**
      * @method suitsCardsForEach contains code to verify how many different types of cards each player received
      * it uses HahMap collection to count suits

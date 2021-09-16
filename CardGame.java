@@ -24,6 +24,9 @@ public class CardGame {
 	}
 	
 	public static void main(String[] args) {
+		CardGame game = new CardGame();
+		//game.shuffle();
+		
 		int numberOfPlayers;
         Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the number of players");
@@ -37,6 +40,7 @@ public class CardGame {
 			player.PlayersOrder();
 			player.distributeCards(cards); // function call to order player sequence
 			player.suitsForEachPlayer();
+			player.sortCards();
 		}
 		
 	}
